@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>This login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- @fortawesome/fontawesome-free -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animista.css">
+  </head>
+  <body>
+
+      <div class="tudo">
+        <div class="menu">
+          <div class="menu-rotas">
+            <a href="#" class="menu-link"> <i class="fas fa-calendar-alt"></i> Calendário </a>
+            <a href="#" class="menu-link"> <i class="far fa-clock"></i> Momento </a>
+            <a href="#" class="menu-link menu-link-ativo"> <i class="fas fa-comment-dots"></i> Mensagens </a>
+            <a href="#" class="menu-link"> <i class="far fa-save"></i> Salvos </a>
+            <a href="#" class="menu-link"> <i class="fas fa-clipboard-check"></i> Finalizados </a>
+            <a href="#" class="menu-link"> <i class="fas fa-cogs"></i> Ajustes </a>
+          </div>
+          <div class="menu-pe">
+            <a href="#" class="menu-link menu-link-pe" onclick="flagEncas(true)"> <i class="fas fa-power-off"></i>  Sair </a>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="chat-msgs">
+
+            <div class="chat-msgs-ele">
+              <img src="imgs/user1.jpg" class="chat-msgs-img" alt="foto dele(a)">
+              <div class="chat-msgs-bloco">
+                <p class="chat-msgs-texto"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel sodales metus, quis aliquet turpis. Mauris vel sapien. </p>
+                <div class="chat-direita">
+                  <span class="chat-msgs-hora">10:00</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-msgs-eu">
+              <div class="chat-msgs-bloco">
+                <p class="chat-msgs-texto"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <div class="chat-direita">
+                  <span class="chat-msgs-hora">10:20</span>
+                </div>
+              </div>
+              <img src="imgs/user2.jpg" class="chat-msgs-img" alt="foto minha">
+            </div>
+
+          </div>
+          <div class="chat-escrever">
+            <div class="chat-barra"></div>
+            <div class="chat-escrever-ntexto">
+              <button type="button"> <i class="fas fa-smile"></i> </button>
+              <button type="button"> <i class="fas fa-link"></i> </button>
+              <button type="button"> <i class="fas fa-microphone"></i> </button>
+            </div>
+            <textarea class="chat-escrever-textual" placeholder="Escreva sua mensagem aqui..."></textarea>
+          </div>
+        </div>
+        <div class="conversas">
+          <div class="conversas-topo">
+            <p class="conversas-topo-titulo">Conversas</p>
+            <div>
+              <a href="#" class="conversas-topo-icone"> <i class="fas fa-plus"></i> </a>
+              <a href="#" class="conversas-topo-icone"> <i class="fas fa-ellipsis-v"></i> </a>
+            </div>
+          </div>
+          <div class="conversas-corpo">
+
+            <div class="conversas-corpo-pessoa">
+              <span class="conversas-corpo-nova"></span>
+              <div class="conversas-corpo-pessoa-flex">
+                <div class="conversas-pessoa-flex">
+                  <img src="imgs/user3.jpg" class="conversas-pessoa-img" alt="pessoa imagem">
+                  <p class="conversas-pessoa-nome">Katy Perry</p>
+                </div>
+                <p class="conversas-pessoa-hora">10:10</p>
+              </div>
+
+              <p class="conversas-pessoa-texto">Morbi viverra feugiat mi eu lobortis. In hac habitasse platea dictumst. Curabitur aliquam felis.</p>
+            </div>
+
+            <div class="conversas-corpo-pessoa">
+              <span class="conversas-corpo-nova"></span>
+              <div class="conversas-corpo-pessoa-flex">
+                <div class="conversas-pessoa-flex">
+                  <img src="imgs/user4.jpg" class="conversas-pessoa-img" alt="pessoa imagem">
+                  <p class="conversas-pessoa-nome">Julius Rock</p>
+                </div>
+                <p class="conversas-pessoa-hora">10:20</p>
+              </div>
+
+              <p class="conversas-pessoa-texto">Morbi viverra feugiat mi eu lobortis.</p>
+            </div>
+
+            <div class="conversas-corpo-pessoa">
+              <span class="conversas-corpo-nova"></span>
+              <div class="conversas-corpo-pessoa-flex">
+                <div class="conversas-pessoa-flex">
+                  <img src="imgs/user5.jpg" class="conversas-pessoa-img" alt="pessoa imagem">
+                  <p class="conversas-pessoa-nome">Julia Roberts</p>
+                </div>
+                <p class="conversas-pessoa-hora">10:40</p>
+              </div>
+
+              <p class="conversas-pessoa-texto">Nulla nulla dui, aliquam sed tempus ac, convallis vel justo.</p>
+            </div>
+          </div>
+
+          <div class="conversas-pe">
+            <i class="fas fa-search"></i>
+            <input type="text" class="conversas-pe-campo" placeholder="Encontre conversas..." value="">
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="painel" id="painel"></div>
+
+      <div class="encas" id="encas">
+        <div class="encas-centralizar">
+          <a href="#" class="encas-link encas-link-ativo">Entrar</a>
+          <a href="#" class="encas-link">Cadastrar</a>
+        </div>
+
+        <form class="encas-form">
+          <input type="text" class="encas-campo" placeholder="Digite seu usuário." value="">
+          <input type="password" class="encas-campo" placeholder="Digite sua senha." value="">
+          <button type="button" onclick="flagEncas(false)"  class="encas-botao"> Entrar </button>
+        </form>
+      </div>
+
+  </body>
+
+  <script type="text/javascript" src="js/script.js"></script>
+
+  <!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> -->
+</html>
